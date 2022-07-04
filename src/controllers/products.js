@@ -38,6 +38,63 @@ const getAllProduct = async (req,res)=>{
         })
     }
 }
+
+const getmerk =async (req,res)=>{
+    try {
+
+        const result = await model.merk.findAll()
+        
+        return response(res,{
+            status:200,
+            message:"mantaappp",
+            data:result
+        })
+    } catch (error) {
+        return response(res,{
+            status:500,
+            message:"terjadi error",
+            error
+        })
+    }
+}
+const getGroupModel =async (req,res)=>{
+    try {
+
+        const result = await model.group_models.findAll()
+        
+        return response(res,{
+            status:200,
+            message:"mantaappp",
+            data:result
+        })
+    } catch (error) {
+        return response(res,{
+            status:500,
+            message:"terjadi error",
+            error
+        })
+    }
+}
+
+const getModel =async (req,res)=>{
+    try {
+
+        const result = await model.group_models.findAll()
+        
+        return response(res,{
+            status:200,
+            message:"mantaappp",
+            data:result
+        })
+    } catch (error) {
+        return response(res,{
+            status:500,
+            message:"terjadi error",
+            error
+        })
+    }
+}
+
 const createProduct =async (req,res)=>{
     try {
         const image = req.file;
@@ -64,4 +121,4 @@ const createProduct =async (req,res)=>{
         })
     }
     }
-module.exports={getAllProduct,createProduct}
+module.exports={getAllProduct,createProduct, getmerk,getGroupModel,getModel}
