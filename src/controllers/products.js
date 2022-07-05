@@ -79,7 +79,7 @@ const getGroupModel =async (req,res)=>{
 const getModel =async (req,res)=>{
     try {
 
-        const result = await model.group_models.findAll()
+        const result = await model.models.findAll()
         
         return response(res,{
             status:200,
