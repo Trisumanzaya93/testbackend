@@ -6,7 +6,7 @@ const upload = require("../middlewares/upload")
 productRouter
 
         .get('/',  productController.getAllProduct)
-        .get('/:id',  productController.getAllProduct)
+        .get('/:id',  productController.getProductById)
         .post('/createproduct',upload,productController.createProduct)
         .get('/master/merk',  productController.getmerk)
         .get('/master/groupmodel',  productController.getGroupModel)
