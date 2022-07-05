@@ -80,9 +80,10 @@ const getAllProduct = async (req,res)=>{
 
 const getProductById = async (req,res)=>{
     try {
+      const {id}= req.params
         const result = await model.products.findOne({
             where: {
-                id: 1,
+                id,
               },
               include: [
                 {
